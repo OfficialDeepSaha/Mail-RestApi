@@ -13,13 +13,13 @@ public class MailController {
 private	MailService mailService;
 	
 	@GetMapping("/send")
-	public void sendmail() throws Exception {
+	public String sendmail() throws Exception {
 		
 		mailService.send();
 		
 		System.out.print("Messege Successfully Sent!");
 		
-		
+		return "Messege Successfully Sent!😊😊😊";
 	}
 	
 	
