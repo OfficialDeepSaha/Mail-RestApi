@@ -3,6 +3,6 @@ COPY . .
 RUN mvn clean package -DskipTests
 
 FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/demo-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /target/com.Stripe-in-Spring-Boot-0.0.1-SNAPSHOT.jar com.Stripe-in-Spring-Boot.jar
 EXPOSE 8080
 ENTRYPOINT ["java","-jar","demo.jar"]
